@@ -1,11 +1,9 @@
 "use client";
 
 import * as React from "react";
-import {
-  DayPicker,
-  type DayPickerProps,
-  type CaptionProps,
-} from "react-day-picker";
+import { DayPicker, type DayPickerProps } from "react-day-picker";
+import type { MonthCaptionProps } from "react-day-picker";
+
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { cn } from "../../lib/utils";
 import { buttonVariants } from "./button";
@@ -14,8 +12,8 @@ import { useNavigation } from "react-day-picker";
 // -------------------------------------------
 // ✔ Custom Caption (v9 replacement for Navigation)
 // -------------------------------------------
-function CustomCaption(props: CaptionProps) {
-  const { displayMonth } = props;
+function CustomCaption(props: MonthCaptionProps) {
+  const { calendarMonth } = props;
   const { previousMonth, nextMonth, goToMonth } = useNavigation();
 
   return (
@@ -34,7 +32,7 @@ function CustomCaption(props: CaptionProps) {
 
       {/* Month Title */}
       <span className="font-medium text-sm">
-        {displayMonth.toLocaleDateString("en-US", {
+        {calendarMonth.date.toLocaleDateString("en-US", {
           month: "long",
           year: "numeric",
         })}
@@ -67,7 +65,7 @@ export function Calendar({
     <DayPicker
       className={cn("p-3", className)}
       components={{
-        Caption: CustomCaption, // ✔ Correct override for v9
+        MonthCaption: CustomCaption, // ✔ Correct override for v9
       }}
       classNames={{
         months: "flex flex-col sm:flex-row gap-4",
