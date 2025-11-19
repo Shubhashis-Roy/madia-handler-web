@@ -1,0 +1,183 @@
+/* ---------------------------------------------------------- */
+/* MODERN PREMIUM COLOR SYSTEM (SUPER CLEAN)                  */
+/* Inspired by Linear.app / Vercel / Notion                   */
+/* ---------------------------------------------------------- */
+
+/* LIGHT MODE */
+:root {
+  --bg: #f9fafb;
+  --text: #111827;
+
+  --primary: #3b82f6; /* Beautiful soft blue */
+  --primary-hover: #2563eb; /* Darker hover */
+
+  --muted-bg: #eef1f5;
+  --muted-text: #6b7280;
+
+  --card-bg: #ffffff;
+  --card-border: #e5e7eb;
+
+  --footer-bg: #f3f4f6;
+  --footer-text: #6b7280;
+
+  --radius: 12px;
+}
+
+/* DARK MODE */
+.dark {
+  --bg: #0c0c0e;
+  --text: #f3f4f6;
+
+  --primary: #60a5fa;
+  --primary-hover: #3b82f6;
+
+  --muted-bg: #1a1b1e;
+  --muted-text: #9ca3af;
+
+  --card-bg: #141416;
+  --card-border: #2a2c2f;
+
+  --footer-bg: #111113;
+  --footer-text: #7d7f82;
+}
+
+/* ---------------------------------------------------------- */
+/* BASE STYLES                                                */
+/* ---------------------------------------------------------- */
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-geist-sans), sans-serif;
+}
+
+/* BEAUTIFUL HIGHLIGHT TEXT */
+.hero-title {
+  background: linear-gradient(90deg, var(--primary), #9333ea);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Muted */
+.text-muted {
+  color: var(--muted-text);
+}
+
+/* ---------------------------------------------------------- */
+/* BUTTONS                                                    */
+/* ---------------------------------------------------------- */
+
+.btn-primary {
+  background: var(--primary);
+  color: white;
+  padding: 12px 28px;
+  font-weight: 600;
+  border-radius: var(--radius);
+  transition: 0.25s ease;
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+/* Outline Button */
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--card-border);
+  color: var(--text);
+  padding: 12px 28px;
+  font-weight: 600;
+  border-radius: var(--radius);
+  transition: 0.25s ease;
+}
+
+.btn-outline:hover {
+  background: var(--muted-bg);
+}
+
+/* ---------------------------------------------------------- */
+/* PREMIUM FEATURE CARDS (Modern SaaS Style)                  */
+/* ---------------------------------------------------------- */
+
+.feature-card {
+  background: var(--card-bg);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  border-radius: 20px;
+  padding: 32px;
+  min-height: 260px;
+
+  /* Soft floating effect */
+  box-shadow:
+    0 0 1px rgba(0, 0, 0, 0.15),
+    0 4px 8px rgba(0, 0, 0, 0.06),
+    0 12px 24px rgba(0, 0, 0, 0.06);
+
+  transition: all 0.35s cubic-bezier(.16,.84,.44,1);
+  cursor: pointer;
+}
+
+/* Hover Upgrade (smooth & elegant) */
+.feature-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow:
+    0 0 1px rgba(0, 0, 0, 0.15),
+    0 6px 14px rgba(0, 0, 0, 0.08),
+    0 18px 40px rgba(0, 0, 0, 0.10);
+}
+
+/* Icon style */
+.feature-icon {
+  padding: 12px;
+  background: rgba(var(--primary-rgb), 0.12);
+  border-radius: 14px;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+/* Title */
+.feature-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+/* Description text */
+.feature-desc {
+  font-size: 0.95rem;
+  color: var(--muted-text);
+  line-height: 1.5;
+}
+
+
+/* ---------------------------------------------------------- */
+/* STEP CIRCLE                                                */
+/* ---------------------------------------------------------- */
+
+.step-circle {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: white;
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 16px;
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.35);
+}
+
+/* ---------------------------------------------------------- */
+/* FOOTER                                                     */
+/* ---------------------------------------------------------- */
+
+.footer {
+  background: var(--footer-bg);
+  color: var(--footer-text);
+  padding: 50px 20px;
+}

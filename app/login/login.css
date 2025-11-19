@@ -1,0 +1,148 @@
+/* --------------------------------------------- */
+/* GLOBAL THEME VARIABLES (light + dark support) */
+/* --------------------------------------------- */
+
+:root {
+  --card-bg: hsl(0 0% 100%);
+  --card-border: hsl(0 0% 85%);
+  --input-bg: hsl(0 0% 98%);
+  --input-border: hsl(0 0% 80%);
+  --input-text: hsl(0 0% 15%);
+  --muted-text: hsl(0 0% 45%);
+}
+
+.dark {
+  --card-bg: hsl(0 0% 12%);
+  --card-border: hsl(0 0% 22%);
+  --input-bg: hsl(0 0% 18%);
+  --input-border: hsl(0 0% 35%);
+  --input-text: hsl(0 0% 90%);
+  --muted-text: hsl(0 0% 60%);
+}
+
+/* --------------------------------------------- */
+/* PAGE CONTAINER                                */
+/* --------------------------------------------- */
+
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* --------------------------------------------- */
+/* CARD                                           */
+/* --------------------------------------------- */
+
+.login-card {
+  width: 100%;
+  max-width: 430px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+
+  padding: 36px;
+  border-radius: 20px;
+
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+  animation: fadeIn 0.4s ease;
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --------------------------------------------- */
+/* HEADERS                                        */
+/* --------------------------------------------- */
+
+.login-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.login-sub {
+  font-size: 1rem;
+  color: var(--muted-text);
+  margin-bottom: 28px;
+}
+
+/* --------------------------------------------- */
+/* FORM / INPUTS                                  */
+/* --------------------------------------------- */
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.login-form label {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.login-input {
+  width: 100%;
+  padding: 14px 16px;
+
+  background: var(--input-bg);
+  color: var(--input-text);
+
+  border: 1px solid var(--input-border);
+  border-radius: 12px;
+
+  font-size: 1rem;
+  transition: 0.25s ease;
+}
+
+.login-input:focus {
+  border-color: var(--primary);
+  outline: none;
+  box-shadow: 0 0 0 3px hsl(265 90% 70% / 0.35);
+}
+
+/* --------------------------------------------- */
+/* BUTTON                                         */
+/* --------------------------------------------- */
+
+.login-btn {
+  margin-top: 10px;
+  padding: 14px;
+  width: 100%;
+
+  font-size: 1.05rem;
+  border-radius: 12px;
+}
+
+/* --------------------------------------------- */
+/* FOOTER TEXT                                    */
+/* --------------------------------------------- */
+
+.signup-text {
+  margin-top: 22px;
+  font-size: 0.95rem;
+  text-align: center;
+  color: var(--muted-text);
+}
+
+.signup-link {
+  color: var(--primary);
+  font-weight: 600;
+  margin-left: 4px;
+  transition: 0.2s ease-in-out;
+}
+
+.signup-link:hover {
+  color: var(--primary-hover);
+}
